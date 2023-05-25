@@ -1,0 +1,86 @@
+
+@keyframes  depth{
+    0% {
+        scale: 1;
+    } 
+    50% {
+        scale: .5;
+
+    } 100% {
+        scale: 1;
+    }
+}
+
+@keyframes swimRigth {
+    0% {
+        transform: rotateY(25deg);
+    } 
+    50% {
+        transform: rotateY(-25deg);
+
+    } 100% {
+        transform: rotateY(25deg);
+    }
+}
+@keyframes swimLeft {
+    0% {
+        transform: rotateY(-205deg);
+    } 
+    50% {
+        transform: rotateY(-155deg);
+    } 100% {
+        transform: rotateY(-205deg);
+        scale: 1;
+    }
+}
+@keyframes swimDown {
+    0%{
+        transform: rotateZ(92deg);
+    }
+    25% {
+        transform: rotateZ(88deg);
+    } 
+    50% {
+        transform: rotateZ(92deg);
+    } 75% {
+        transform: rotateZ(88deg);
+    } 100% {
+        transform: rotateZ(92deg);
+    }
+}
+@keyframes swimTop {
+    0%{
+        transform: rotateZ(-82deg);
+    }
+    25% {
+        transform: rotateZ(-100deg);
+    } 
+    50% {
+        transform: rotateZ(-82deg);
+
+    } 75% {
+        transform: rotateZ(-100deg);
+    } 100% {
+        transform: rotateZ(-82deg);
+    }
+}
+.Fish {
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.Fish img {
+    z-index: 120;
+    max-width: 5%;
+    user-select: none;
+    user-zoom: none;
+    top: calc(50% - 20px);
+    right: calc(50% - 20px);
+    position: relative;
+}
+.swimTop   {  animation: swimTop  6s normal infinite;  }
+.swimDown  {  animation: swimDown  1s alternate infinite;  }
+.swimRigth {  animation: swimRigth 1s normal infinite;  }
+.swimLeft  {  animation: swimLeft  1s normal infinite;  }
